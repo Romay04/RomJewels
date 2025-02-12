@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Playfair Display", serif;
+}
+
+main {
+    margin: 2rem auto;
+    font-family: "Playfair Display", serif;
+}
+
+/* Slider section */
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 90rem;
+    height: 30rem;
+}
+
+.text {
+    color: #915858;
+    font-size: 3rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: 11rem;
+    left: 10rem;
+    background-color: inherit;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease-in-out 1s, transform 1s ease-in-out 1s;
+}
+
+#ii {
+    color: whitesmoke;
+}
+
+#uu {
+    color: #805252;
+}
+
+.slide.active .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* What we have section */
+.what-we-have {
+    width: 60%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.sec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 10rem;
+}
+
+.sec h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* For special occassion */
+.for-special-occasions {
+    width: 60%;
+    margin: 5rem auto;
+    display: flex;
+    gap: 2rem;
+}
+.texts h1,.top-picks h1{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.image-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.sets {
+    display: flex;
+    flex-direction: column;
+}
+
+.sets img{
+    width: 15rem;
+    display: block;
+}
+.sets video{
+    width: 15rem;
+    height: auto;
+    display: block;
+}
+
+.sets span {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    bottom: 2rem;
+    left: 2rem;
+    text-decoration: underline 0.15rem;
+    background-color: inherit;
+}
+/* Top pick section */
+.top-picks {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    position: relative;
+}
+.items-container {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+.item  h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.active {
+    display: flex;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width:100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    border-radius: 100%;
+}
+.controls button {
+    background: whitesmoke;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.prev {
+    position: absolute;
+    left: 0;
+}
+.next {
+    position: absolute;
+    right: 0;
+}
+/* last  */
+.jewwlryAd{
+    width: 65%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid;
+}
+.jewwlryAd video {
+    width: 50rem;
+    height: auto;
+}
+.sayings{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+.sayings h3{
+    font-weight: 700;
+    font: 2.5rem;
+}
+.sayings a{
+    border: 1px solid #805252;
+    width: 80%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #805252;
+}
+.sayings a:hover{
+    background-color: #805252;
+    color: whitesmoke;
+    transition: ease-out 2s;
+}
+/* Extra Small Devices (Phones) */
+@media (max-width: 575px) {
+    .slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 1.5rem;
+        bottom: 5rem;
+        left: 1rem;
+    }
+
+    .what-we-have {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        height: 45rem;
+    }
+    .sec{
+        font-size: 2rem;
+    }
+
+    .for-special-occasions {
+        width: 60%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-display{
+        grid-template-columns: 1fr;
+    }
+    .sets{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .une img , .une video{
+        width: 10rem;
+        height: 10rem;
+    }
+    .top-picks {
+        width: 90%;
+    }
+
+    .items-container {
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .jewwlryAd {
+        width: 90%;
+        flex-direction: column;
+        border: none;
+    }
+    .jewwlryAd video{
+        width: 20rem;
+    }
+
+    .sayings h3 {
+        font-size: 1.5rem;
+    }
+
+    .sayings a {
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+/* Small Devices (Tablets) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .slider{
+        width: 90%;
+    }
+    .slide fade img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 2rem;
+        bottom: 7rem;
+        left: 2rem;
+    }
+
+    .what-we-have {
+        border: 1px solid;
+        width: 80%;
+        height: 50rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .for-special-occasions {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .image-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-picks {
+        width: 90%;
+    }
+
+    .items-container {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jewwlryAd {
+        width: 90%;
+        flex-direction: column;
+    }
+    .jewwlryAd video{
+        width: 20rem;
+    }
+    .sayings h3 {
+        font-size: 1.4rem;
+    }
+
+    .sayings a {
+        width: 90%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+/* Medium Devices (Small Laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 2.5rem;
+        bottom: 8rem;
+        left: 3rem;
+    }
+
+    .what-we-have {
+        width: 70%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .for-special-occasions {
+        width: 70%;
+    }
+
+    .image-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-picks {
+        width: 80%;
+    }
+
+    .items-container {
+        width: 70%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .jewwlryAd {
+        width: 80%;
+    }
+
+    .sayings h3 {
+        font-size: 2rem;
+    }
+
+    .sayings a {
+        width: 80%;
+        height: 3rem;
+        line-height: 3rem;
+    }
+}

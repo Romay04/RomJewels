@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <div data-include-html="nav.html"></div>
+    <main>
+        <div class="cart-container">
+            <h2>Your Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be  populated here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <div class="Update">
+                <a href="shop.html" class="update-cart-button">Update Cart</a>
+            </div>
+            
+            <h3>Order Summary</h3>
+            <p id="subtotal">Subtotal: GH&#8373; 0.00</p>
+            <p id="taxes">Taxes: GH&#8373; 0.00</p>
+            <p id="total-amount">Total: GH&#8373; 0.00</p>
+            <button id="checkout-button">Checkout</button>
+            <div class="secure">
+                <img src="images/secure.webp" alt="">
+            </div>
+        </div>
+       
+    </main>
+    <div data-include-html="footer.html"></div>
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</body>
+
+</html>
