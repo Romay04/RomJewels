@@ -161,19 +161,42 @@ main {
         width: 100%;
     }
 
-    .cart-table, .cart-summary {
-        width: 100%;
+    .cart-table, .cart-table thead, .cart-table tbody, .cart-table th, .cart-table td, .cart-table tr {
+        display: block;
     }
 
-    .quantity-input {
-        width: 5rem;
+    .cart-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
     }
 
-    .remove-button {
-        width: auto;
-        font-size: 0.8rem;
+    .cart-table tr {
+        border: 1px solid #ddd;
+        margin-bottom: 1rem;
     }
 
+    .cart-table td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    .cart-table td:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: calc(50% - 1rem);
+        padding-right: 1rem;
+        white-space: nowrap;
+        content: attr(data-label);
+        text-align: left;
+        transform: translateY(-50%);
+        font-weight: bold;
+    }
     .update-cart-button, #checkout-button {
         width: 100%;
         font-size: 1rem;
