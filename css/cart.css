@@ -159,8 +159,8 @@ main {
 
     .cart-container {
         width: 100%;
+    
     }
-
     .cart-table, .cart-table thead, .cart-table tbody, .cart-table th, .cart-table td, .cart-table tr {
         display: block;
     }
@@ -197,6 +197,10 @@ main {
         transform: translateY(-50%);
         font-weight: bold;
     }
+     .cart-summary {
+        width: 100%;
+    }
+
     .update-cart-button, #checkout-button {
         width: 100%;
         font-size: 1rem;
