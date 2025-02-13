@@ -159,6 +159,7 @@ main {
 
     .cart-container {
         width: 100%;
+        border: none;
     
     }
     .cart-table, .cart-table thead, .cart-table tbody, .cart-table th, .cart-table td, .cart-table tr {
@@ -171,7 +172,7 @@ main {
         left: -9999px;
     }
 
-    .cart-table tr {
+    .cart-table{
         border: 1px solid #ddd;
         margin-bottom: 1rem;
     }
@@ -180,9 +181,8 @@ main {
         border: none;
         border-bottom: 1px solid #ddd;
         position: relative;
-        padding-left: 50%;
         white-space: nowrap;
-        text-align: right;
+        text-align: left;
     }
 
     .cart-table td:before {
@@ -197,6 +197,10 @@ main {
         transform: translateY(-50%);
         font-weight: bold;
     }
+    .cart-table img{
+        width: 4rem;
+        height: 4rem;
+    }
      .cart-summary {
         width: 100%;
     }
@@ -204,6 +208,13 @@ main {
     .update-cart-button, #checkout-button {
         width: 100%;
         font-size: 1rem;
+    }
+    .secure{
+        display: flex;
+        align-items: center;
+    }
+    .secure img{
+        width: 5rem;
     }
 }
 
